@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 from actions.upload import UploadHandler
 
 ActionsHandler = [

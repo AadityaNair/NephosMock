@@ -56,8 +56,8 @@ class DriveStorage(object):
         media = MediaFileUpload(filename=filename, mimetype=None, chunksize=1024, resumable=True)
         file_metadata = {'name': filename}
 
-        f = self.file_service.create(body=file_metadata, media_body=media).execute()
-        print(f)
+        self.file_service.create(body=file_metadata, media_body=media).execute()
+        return f
 
     def _isExists(self, fileid):
         try:
