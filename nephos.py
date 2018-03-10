@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-from actions.upload import UploadHandler
+from actions.upload import UploadHandler, DownloadHandler, SearchHandler
 
 ActionsHandler = [
     UploadHandler('upload'),
+    DownloadHandler('download'),
+    SearchHandler('search'),
 ]
 
 
