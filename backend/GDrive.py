@@ -75,7 +75,7 @@ class DriveStorage(object):
 
     def search(self, name_subs):
         query = "name contains '{}'".format(name_subs)
-        response = self.file_service.list(q=query, pageSize=5).execute()
+        response = self.file_service.list(q=query, pageSize=5, includeTeamDriveItems=True, supportsTeamDrives=True).execute()
         items = response.get('files', [])
         if not items:
             print("No such item found")
